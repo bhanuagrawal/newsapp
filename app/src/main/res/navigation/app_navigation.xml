@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/itemListFragment">
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.ultimatix.cashrich.ui.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.ultimatix.cashrich.ui.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
